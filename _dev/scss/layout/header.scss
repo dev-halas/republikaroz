@@ -1,0 +1,238 @@
+@use "../base/mixins.scss";
+@use "../base/colors.scss";
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding: 24px 0;
+  background-color: colors.$darkRed;
+}
+
+.header[scrolled] {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+
+  .headerLogo {
+    width: 5vw;
+  }
+}
+
+.headerInner {
+  width: min(90vw, 1700px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.headerLogo {
+  @include mixins.responsive("small") {
+    max-width: 150px;
+  }
+}
+
+.navbar {
+  @include mixins.responsive("small") {
+    display: none;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .mainMenu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      column-gap: clamp(32px, 5vw, 64px);
+      padding: 16px 0;
+      border-bottom: 1px solid colors.$white;
+    }
+
+    a {
+      padding: 12px 0;
+      @include mixins.transition(all 0.2s);
+
+      &:hover {
+        color: colors.$red;
+      }
+    }
+  }
+
+  .socialMedia {
+    ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    a {
+      padding: 16px 32px;
+      font-size: 16px;
+      border: 1px solid colors.$white;
+      border-radius: 24px;
+
+      @include mixins.transition(all 0.2s);
+
+      &:hover {
+        background-color: colors.$white;
+        color: colors.$darkRed;
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@include mixins.responsive("tablet") {
+  .header {
+    padding: 24px 0;
+    .headerLogo {
+      max-width: 50px;
+    }
+  }
+
+  .headerInner {
+    gap: 12px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    order: 1;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+
+  .header[open] {
+    height: 100%;
+    border-bottom: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    @include mixins.transition(all 0.2s);
+
+    .headerInner {
+      height: 100%;
+      grid-template-rows: auto 1fr;
+    }
+
+    .navbar {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      grid-column: span 2;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      animation-delay: 0.3s;
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
+      @include mixins.transition(all 0.2s);
+    }
+  }
+
+  .mainMenu {
+    ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      font-size: 28px;
+    }
+  }
+
+  .socialMedia {
+    a {
+      display: block;
+    }
+  }
+
+  //HAMBURGER
+  .toggle {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    transition-duration: 0.5s;
+  }
+
+  .bars {
+    width: 100%;
+    height: 3px;
+    background-color: colors.$white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+
+  #bar2 {
+    transition-duration: 0.8s;
+  }
+
+  #bar1 {
+    width: 75%;
+    margin-left: auto;
+  }
+
+  #bar3 {
+    width: 85%;
+    margin-left: auto;
+  }
+
+  .header[open] .toggle .bars {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+
+  .header[open] .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+  }
+
+  .header[open] .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+
+  .header[open] .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+
+  .header[open] .toggle {
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,97 @@
+@use "../../base/mixins.scss";
+@use "../../base/colors.scss";
+
+.awards {
+  padding: 10% 0 5% 0;
+}
+
+.awardsItem {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  padding: 24px 0;
+  gap: 16px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4 {
+    grid-column: span 2;
+    font-size: clamp(18px, 1.5vw, 26px);
+  }
+
+  p {
+    grid-column: span 3;
+    max-width: 85%;
+  }
+
+  .awardItem__full {
+    grid-column: span 5;
+  }
+
+  @include mixins.responsive('small') {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    column-gap: 0;
+    text-align: center;
+    align-items: center;
+
+    h4, p {
+      grid-column: span 1;
+    }
+
+    p {
+      max-width: 100%;
+    }
+  }
+}
+
+.awardsItem:nth-child(even) {
+  background-color: colors.$white;
+  color: colors.$darkGray;
+
+  p {
+    color: colors.$darkRed;
+  }
+}
+
+.awardsContent {
+  border-top: 1px solid #ededed9f;
+  border-bottom: 1px solid #ededed9f;
+  margin-top: 5%;
+  display: grid;
+  grid-auto-rows: 1fr;
+
+  @include mixins.responsive('small') {
+    grid-auto-rows: auto;
+  }
+}
+
+.awardsDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include mixins.responsive('small') {
+    grid-column: span 6;
+    gap: 16px;
+  }
+}
+
+.awardsDescMore {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+
+  p {
+    grid-column: span 5;
+
+    @include mixins.responsive('small') {
+      grid-column: span 6;
+      gap: 0;
+    }
+  }
+}

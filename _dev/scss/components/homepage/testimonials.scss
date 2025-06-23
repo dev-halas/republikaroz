@@ -1,0 +1,95 @@
+@use "../../base/mixins.scss";
+@use "../../base/colors.scss";
+
+.testimonials {
+  padding: 10% 0;
+  text-align: center;
+  position: relative;
+
+  .button--white {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: fit-content;
+    margin: auto;
+  }
+}
+
+.testimonialContent {
+  padding: 64px 0;
+}
+
+.testimonial-slider {
+  position: relative;
+  text-align: center;
+
+  .testimonial-content {
+    width: min(85%, 1440px);
+    padding: 0 12%;
+    border-right: 1px solid colors.$white;
+    border-left: 1px solid colors.$white;
+    margin: auto;
+
+    @include mixins.responsive('tablet') {
+      border: none;
+      width: 90%;
+      padding: 0;
+    }
+  }
+
+  .testimonial-text {
+    font-size: clamp(16px, 1.2vw, 22px);
+    font-weight: 100;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+
+  .testimonial-author {
+    font-weight: bold;
+    font-size: clamp(18px, 1.2vw, 22px);
+    margin-bottom: 0.5rem;
+  }
+
+  .swiper-button-next {
+    margin-right: clamp(6px, 2vw, 32px);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+
+  .swiper-button-prev {
+    margin-left: clamp(6px, 2vw, 32px);
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    width: 44px;
+    aspect-ratio: 1;
+
+    @include mixins.responsive('tablet') {
+      width: 24px;
+      top: 80%;
+    }
+  }
+
+  .testimonialDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mixins.responsive('tablet') {
+      flex-direction: column;
+      gap: 12px;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      img {
+        max-width: 32px;
+        order: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use './base/reset.scss';
+@use './base/core.scss';
+
+@use './layout/header.scss';
+
+@use './components/homepage/hero.scss';
+@use './components/homepage/about.scss';
+@use './components/homepage/description.scss';
+@use './components/homepage/awards.scss';
+@use './components/homepage/testimonials.scss';
+
+
+@use './layout/footer.scss';
+
+/* ------ Dodatkowe globalne style ------ */
+@import "swiper/swiper-bundle.css";

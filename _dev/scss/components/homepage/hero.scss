@@ -1,0 +1,61 @@
+@use "../../base/mixins.scss";
+@use "../../base/colors.scss";
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  margin-top: 10%;
+
+  @include mixins.responsive('small') {
+    margin-top: 100px;
+  }
+}
+
+.heroDish {
+  grid-column: span 3;
+
+  @include mixins.responsive('small') {
+    grid-column: span 6;
+    order: 1;
+  }
+}
+
+.heroContent {
+  grid-column: span 5;
+  position: relative;
+  padding-left: 10%;
+
+  h2 {
+    font-size: clamp(48px, 4vw, 72px);
+    line-height: 1;
+  }
+
+  @include mixins.responsive('small') {
+    grid-column: span 12;
+    padding-left: 5%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+}
+
+.heroRestaurant {
+  grid-column: span 4;
+
+  @include mixins.responsive('small') {
+    grid-column: span 6;
+  }
+}
+
+.heroVector {
+  position: absolute;
+  z-index: -1;
+  left: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  @include mixins.responsive('small') {
+    right: 0;
+    left: auto;
+  }
+}

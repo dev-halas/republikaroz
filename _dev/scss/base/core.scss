@@ -1,0 +1,249 @@
+@use "mixins.scss";
+@use "colors.scss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
+}
+
+body {
+  background-color: colors.$darkRed;
+  color: colors.$white;
+  font-family: "Rokkitt", serif;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-size: clamp(16px, 1.05vw, 20px);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: clamp(32px, 2.5vw, 64px);
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+$container: 75vw;
+$containerMobile: 90vw;
+
+.container {
+  width: min($container, 1600px);
+  margin: 0 auto;
+  position: relative;
+  @include mixins.responsive("tablet") {
+    width: min($containerMobile, 900px);
+  }
+}
+
+@media screen and (max-width: 782px) {
+  html {
+    margin-top: 0px !important;
+  }
+}
+
+$containerXL: 85vw;
+
+.containerXL {
+  width: min($containerXL, 1800px);
+  margin: 0 auto;
+  position: relative;
+  @include mixins.responsive("tablet") {
+    width: min($containerMobile, 900px);
+  }
+}
+
+$containerSmall: 50vw;
+
+.containerSmall {
+  width: min($containerSmall, 1200px);
+  margin: 0 auto;
+  position: relative;
+  @include mixins.responsive("tablet") {
+    width: min($containerMobile, 900px);
+  }
+}
+
+@media screen and (max-width: 782px) {
+  html {
+    margin-top: 0px !important;
+  }
+}
+
+#map {
+  height: 440px;
+}
+
+#mapContent {
+  color: colors.$darkRed;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.button {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  @include mixins.responsive("tablet") {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}
+
+.whiteOutline {
+  border: 1px solid white;
+}
+
+.button--red {
+  background-color: colors.$red;
+
+  &:hover {
+    background-color: colors.$white;
+    color: colors.$darkRed;
+  }
+}
+
+.button--white {
+  background-color: colors.$white;
+  color: colors.$darkRed;
+
+  &:hover {
+    color: colors.$darkGray;
+  }
+}
+
+.h1 {
+  font-size: clamp(24px, 3.2vw, 72px);
+  font-weight: 500;
+}
+
+.font300 {
+  font-weight: 300;
+}
+
+.font700 {
+  font-weight: 700;
+}
+
+.subTitle {
+  color: colors.$gray;
+  text-transform: uppercase;
+}
+
+.lightItalic {
+  @extend .font300;
+  font-style: italic;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+.twoColumns__text {
+  grid-column: span 7;
+  display: flex;
+  align-items: center;
+  padding: 0 20%;
+
+  @include mixins.responsive('small') {
+    grid-column: span 13;
+    order: 1;
+    padding: 5%;
+  }
+}
+
+.twoColumns__image {
+  grid-column: span 6;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include mixins.responsive('small') {
+    grid-column: span 13;
+  }
+}
+
+
+.bgRed {
+  background-color: colors.$red;
+}
+
+.bgWhite {
+  background-color: colors.$white;
+}
+
+.bgDarkRed {
+  background-color: colors.$darkRed;
+}
+
+.bgDarkGrey {
+  background-color: colors.$darkGray;
+}
+
+.bgGray {
+  background-color: colors.$gray;
+}
+
+.fontRed {
+  color: colors.$red;
+}
+
+.fontWhite {
+  color: colors.$white;
+}
+
+.fontDarkRed {
+  color: colors.$darkRed;
+}
+
+.fontDarkGrey {
+  color: colors.$darkGray;
+}
+
+.fontGray {
+  color: colors.$gray;
+}
+
+.fontLightGray {
+  color: colors.$lightGray;
+}
