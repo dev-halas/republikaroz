@@ -54,7 +54,6 @@
 			</div>
 		</div>
 		<script src="<?php echo THEME_URL ?>public/map.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARc06EBMh--agRkLmDGWifrvS0E4duyGU&callback=initMap"></script>
 	</footer>
 </body>
 
