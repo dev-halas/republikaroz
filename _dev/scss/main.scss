@@ -10,6 +10,12 @@
 @use './components/homepage/testimonials.scss';
 
 
+@use './layout/menu.scss';
+@use './layout/events.scss';
+@use './layout/posts.scss';
+@use './layout/gallery.scss';
+
+@use './base/animations.scss';
 @use './layout/footer.scss';
 
 /* ------ Dodatkowe globalne style ------ */

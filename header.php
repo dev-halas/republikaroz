@@ -29,10 +29,10 @@
 					<div class="socialMedia">
 						<ul>
 							<li>
-								<a href="#">facebook</a>
+								<a href="https://www.facebook.com/RepublikaRoz" target="_blank">facebook</a>
 							</li>
 							<li>
-								<a href="#">instagram</a>
+								<a href="https://www.instagram.com/republikaroz/" target="_blank">instagram</a>
 							</li>
 						</ul>
 					</div>

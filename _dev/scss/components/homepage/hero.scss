@@ -18,17 +18,41 @@
   @include mixins.responsive('small') {
     grid-column: span 6;
     order: 1;
+    height: 100%;
+
+    img {
+      min-height: 100%;
+    }
   }
 }
 
 .heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   grid-column: span 5;
   position: relative;
   padding-left: 10%;
+  gap: 8%;
 
   h2 {
     font-size: clamp(48px, 4vw, 72px);
-    line-height: 1;
+    line-height: 0.9;
+    position: relative;
+    width: fit-content;
+  }
+
+  .circleText {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-28%, -56%);
+    font-weight: 300;
+
+    svg {
+      width: clamp(64px, 7vw, 140px);
+    }
   }
 
   @include mixins.responsive('small') {
@@ -44,6 +68,11 @@
 
   @include mixins.responsive('small') {
     grid-column: span 6;
+    height: 100%;
+
+    img {
+      min-height: 100%;
+    }
   }
 }
 
@@ -58,4 +87,10 @@
     right: 0;
     left: auto;
   }
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }

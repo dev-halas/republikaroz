@@ -2,10 +2,10 @@
   background-image: url('<?php echo THEME_URL; ?>_dev/images/testimonials-background.jpg'); 
   background-size: cover;
   background-position: center;">
-  <div class="testimonialsHeader">
+  <div class="testimonialsHeader animate-zoom-in">
     <h2>Opinie naszych<br>Klientów</h2>
   </div>
-  <div class="testimonialContent">
+  <div class="testimonialContent animate-fade-up">
     <div class="testimonial-slider swiper">
       <div class="swiper-wrapper">
 
@@ -54,7 +54,7 @@
       </div>
     </div>
   </div>
-  <a href="#" class="button button--white">
+  <a target="_blank" href="https://www.google.com/search?sa=X&sca_esv=7f320e2b1e22baf4&rlz=1C1GCEA_enPL1154PL1154&tbm=lcl&sxsrf=AE3TifN2f5xSokWVc4raNyEgc2cLzUiD3Q:1753897149139&q=Republika+R%C3%B3%C5%BC+by+Andrzej+Go%C5%82%C4%85bek+Opinie&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDaxtDA1sLQ0MjE2NjMwszAwN93AyPiKUTsotaA0KSczO1Eh6PDmo3sUkioVHPNSiqpSsxTc8482HWlNSs1W8C_IzMtMXcRKimoAmPt_HncAAAA&rldimm=13498509924336068075&hl=pl-PL&ved=2ahUKEwjA7q-EkOWOAxVQHxAIHVgsNpIQ9fQKegQIWhAF&biw=3127&bih=1155&dpr=1.1#lkt=LocalPoiReviews" class="button button--white">
     <span>Zobacz wszystkie opinie</span>
     <img src="<?php echo THEME_URL; ?>_dev/images/google_logo.svg" alt="google logo">
   </a>

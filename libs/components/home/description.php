@@ -1,5 +1,5 @@
 <section class="desriptionHome">
-  <div class="twoColumns">
+  <div class="twoColumns animate-slide-left">
     <div class="twoColumns__text bgRed">
       <h2>Republika Róż <br>by Andrzej Gołąbek <br>- kulinarna oaza <br>w sercu Poznania.</h2>
     </div>
@@ -7,7 +7,7 @@
       <img src="<?php echo THEME_URL; ?>_dev/images/home_description_food.jpg" alt="republika róż - polędwica">
     </div>
   </div>
-  <div class="twoColumns">
+  <div class="twoColumns animate-slide-right">
     <div class="twoColumns__image">
       <img src="<?php echo THEME_URL; ?>_dev/images/home_description_restaurant.jpg" alt="republika róż - polędwica">
     </div>

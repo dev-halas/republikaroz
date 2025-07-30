@@ -1,0 +1,136 @@
+@use "../base/mixins.scss";
+@use "../base/colors.scss";
+
+.menu {
+  padding: 20vh 0 8vh;
+
+  .bookTable {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.menuHeader {
+  padding: clamp(16px, 5vw, 64px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menuHeader__text {
+    position: relative;
+  }
+
+  h2 {
+    font-size: clamp(48px, 3.75vw, 86px);
+  }
+
+  .circleText {
+    position: absolute;
+    right: -100px;
+    top: -70px;
+  }
+
+  @include mixins.responsive('tablet') {
+    flex-direction: column;
+    gap: 32px;
+    align-items: start;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .circleText {
+      position: absolute;
+      right: -36px;
+      top: -64px;
+      svg {
+        width: 72px;
+      }
+    }
+  }
+}
+
+.menuItem {
+  padding: 64px 0;
+}
+
+.menuItem:nth-child(even) {
+  background-color: colors.$white;
+  color: colors.$darkRed;
+}
+
+.menuCategory {
+  max-width: 1280px;
+  margin: auto;
+  
+  @include mixins.responsive('small') {
+    max-width: 90vw;
+  }
+}
+
+.menuCategory__title {
+  margin-bottom: 48px;
+}
+
+.menuCategory__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 24px;
+}
+
+.menuDish {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 6%;
+  align-items: center;
+
+  .menuDish__image {
+    aspect-ratio: 1;
+    width: 200px;
+  }
+
+  .menuDish__details {
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .menuDish__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3, .menuDish__price {
+    font-size: clamp(22px, 1.5vw, 32px);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  @include mixins.responsive('small') {
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 12px;
+    align-items: start;
+
+    .menuDish__image {
+      width: 100%;
+      grid-column: span 2;
+      margin-top: 2px;
+    }
+
+    .menuDish__details {
+      font-size: 14px;
+      grid-column: span 5;
+    }
+
+    h3, .menuDish__price {
+      line-height: 1;
+    }
+  }
+}

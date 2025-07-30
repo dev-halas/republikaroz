@@ -1,1 +1,1 @@
-<div id="map"></div>
+<div id="map" class="animate-zoom-in"></div>

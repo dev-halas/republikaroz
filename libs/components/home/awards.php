@@ -1,6 +1,6 @@
 <section class="awards">
   <div class="container">
-    <div class="awardsDesc">
+    <div class="awardsDesc animate-zoom-in">
       <h2>
         Zdobyliśmy kulinarne<br>
         uznanie w kilku plebiscytach.
@@ -14,7 +14,7 @@
 
     </div>
     <div class="awardsContent">
-      <div class="awardsItem">
+      <div class="awardsItem animate-fade-up">
         <div>
           <img src="<?php echo THEME_URL; ?>_dev/images/footer_cert1.jpg" alt="nagroda best of awards - logo">
         </div>
@@ -22,24 +22,24 @@
         <p>Wyróżnienie w ogólnopolskim rankingu „Poland 100 Best Restaurants”, które potwierdza wysoki poziom kulinarny
           i profesjonalizm obsługi.</p>
       </div>
-      <div class="awardsItem">
+      <div class="awardsItem animate-fade-up">
         <div>
           <img src="<?php echo THEME_URL; ?>_dev/images/archimagirus_22.png" alt="nagroda archimagirus - logo">
         </div>
         <h4 class="awardItem__full">Laureat konkursu Archimagirus 2022</h4>
       </div>
-      <div class="awardsItem">
+      <div class="awardsItem animate-fade-up">
         <div></div>
         <h4 class="awardItem__full">II miejsce w konkursie „Kaczka po poznańsku” 2017</h4>
       </div>
-      <div class="awardsItem">
+      <div class="awardsItem animate-fade-up">
         <div>
           <img src="<?php echo THEME_URL; ?>_dev/images/restaurant_week.png" alt="nagroda restaurant week - logo">
         </div>
         <h4>I miejsce w Plebiscycie<br> Restaurant Week 2019</h4>
         <p>w kategorii Najlepsza Restauracja</p>
       </div>
-      <div class="awardsItem">
+      <div class="awardsItem animate-fade-up">
         <div>
           <img src="<?php echo THEME_URL; ?>_dev/images/złoty_widelec.png" alt="nagroda złoty widelec - logo">
         </div>

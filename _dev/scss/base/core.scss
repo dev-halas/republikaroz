@@ -18,6 +18,14 @@ body {
   overflow-y: auto;
 }
 
+body, main, section {
+  overflow-x: hidden;
+}
+
+main, section {
+  overflow-y: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -107,6 +115,10 @@ $containerSmall: 50vw;
   padding: 16px 32px;
   font-size: 16px;
   font-weight: 500;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
 
   border-radius: 32px;
   -webkit-border-radius: 32px;
@@ -144,6 +156,18 @@ $containerSmall: 50vw;
 
   &:hover {
     color: colors.$darkGray;
+  }
+}
+
+.button--withArrow {
+  padding: 0 16px 0 0;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 16px;
+  line-height: 2;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -224,6 +248,14 @@ $containerSmall: 50vw;
   background-color: colors.$gray;
 }
 
+.fontBold {
+  font-weight: bold;
+}
+
+.textCenter {
+  text-align: center;
+}
+
 .fontRed {
   color: colors.$red;
 }
@@ -246,4 +278,19 @@ $containerSmall: 50vw;
 
 .fontLightGray {
   color: colors.$lightGray;
+}
+
+.circleText {
+  svg {
+    width: 140px;
+    height: 140px;
+    transform: rotate(45deg);
+  }
+
+  text {
+    font-size: 14px;
+    fill: white;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+  }
 }

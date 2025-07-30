@@ -1,6 +1,7 @@
 import './scss/main.scss';
 import './js/header';
 import './js/swiper';
+import './js/animations';
 
 document.addEventListener('DOMContentLoaded', () => {
   const apiKey = import.meta.env.VITE_GMAPS_API_KEY;

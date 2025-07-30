@@ -42,5 +42,17 @@
 		));
 		
 	}
+
+	// Skraca excerpt do 25 słów
+	function custom_excerpt_length($length) {
+			return 15; // Możesz zmienić np. na 20 lub 30
+	}
+	add_filter('excerpt_length', 'custom_excerpt_length');
+
+	// Dodaje „…” na końcu excerptu
+	function custom_excerpt_more($more) {
+			return '...';
+	}
+	add_filter('excerpt_more', 'custom_excerpt_more');
 	
 ?>
