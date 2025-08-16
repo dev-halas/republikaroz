@@ -1,4 +1,3 @@
-
 	<footer class="footer" id="contact">
 		<div class="footerImage animate-fade-up">
 			<img src="<?php echo THEME_URL; ?>_dev/images/footer-image.jpg" alt="republika róż ogródek z parasolami">
@@ -31,7 +30,7 @@
 						<div class="openHours__item"><span>czwartek</span><span>12:00 - 22:00</span></div>
 						<div class="openHours__item"><span>piątek</span><span>12:00 - 00:00</span></div>
 						<div class="openHours__item"><span>sobota</span><span>12:00 - 00:00</span></div>
-						<div class="openHours__item"><span>niedziela</span><span>12:00 - 22:00</span></div>
+						<div class="openHours__item"><span>niedziela</span><span>12:00 - 20:00</span></div>
 					</div>
 				</div>
 				<div class="footerInner__item animate-fade-up">

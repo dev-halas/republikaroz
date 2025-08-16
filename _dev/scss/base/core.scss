@@ -3,7 +3,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 10vh;
+  scroll-padding-top: 15vh;
 }
 
 body {
@@ -282,9 +282,13 @@ $containerSmall: 50vw;
 
 .circleText {
   svg {
-    width: 140px;
-    height: 140px;
+    width: clamp(64px, 7vw, 140px);
+    height: clamp(64px, 7vw, 140px);
     transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
   }
 
   text {

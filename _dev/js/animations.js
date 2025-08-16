@@ -49,8 +49,8 @@ Object.entries(animationsMap).forEach(([className, animProps]) => {
 
     ScrollTrigger.create({
       trigger: el,
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 90%",
+      end: "bottom 10%",
       onEnter: show,
       onLeave: hide,
       onEnterBack: show,

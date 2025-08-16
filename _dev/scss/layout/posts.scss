@@ -16,6 +16,7 @@ $articleMainImageRatio: '2/1';
 
   .postsHeader {
     padding-top: 5vh;
+    position: relative;
     
     .postsHeader__text {
       max-width: 90%;
@@ -36,6 +37,21 @@ $articleMainImageRatio: '2/1';
         position: absolute;
         transform: translate(65%, -90%);
         right: 0;
+        -webkit-transform: translate(65%, -90%);
+        -moz-transform: translate(65%, -90%);
+        -ms-transform: translate(65%, -90%);
+        -o-transform: translate(65%, -90%);
+      }
+    }
+
+    @include mixins.responsive('small') {
+      .circleText {
+        position: absolute;
+        right: -36px;
+        top: 16px;
+        svg {
+          width: 72px;
+        }
       }
     }
   }

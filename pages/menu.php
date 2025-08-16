@@ -19,14 +19,20 @@
     <a href="<?php the_field('bookLink', 'option'); ?>" target="_blank" class="button button--white">
       zarezerwuj stolik
     </a>
+    <div class="menuButtons">
+      <a href="#menu" class="button whiteOutline">Menu</a>
+      <a href="#Karta win" class="button whiteOutline">Karta win</a>
+      <a href="#Karta alkoholi" class="button whiteOutline">Karta alkoholi</a>
+    </div>
   </div>
+  <div id="menu"></div>
   <?php 
     if( $menu_categories ): 
     foreach( $menu_categories as $menu_category ) :
   ?>
   
   <div class="menuItem">
-    <div class="menuCategory">
+    <div class="menuCategory" id="<?php echo $menu_category['menu_header']?>">
       <div class="menuCategory__title animate-zoom-in">
         <h2><?php echo $menu_category['menu_header']?></h2>
       </div>

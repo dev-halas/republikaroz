@@ -33,6 +33,7 @@
   }
 
   @include mixins.responsive('tablet') {
+    padding: 32px 0;
     flex-direction: column;
     gap: 32px;
     align-items: start;
@@ -56,7 +57,7 @@
   padding: 64px 0;
 }
 
-.menuItem:nth-child(even) {
+.menuItem:nth-child(odd) {
   background-color: colors.$white;
   color: colors.$darkRed;
 }
@@ -132,5 +133,23 @@
     h3, .menuDish__price {
       line-height: 1;
     }
+  }
+}
+
+.menuButtons {
+  display: flex;
+  font-size: 14px;
+  gap: 4px;
+
+  .button {
+    padding: 8px 16px;
+  }
+}
+
+.menuHeader.container {
+  width: min(90vw, 1600px);
+
+  @include mixins.responsive('small') {
+    width: min(90vw, 900px);
   }
 }
